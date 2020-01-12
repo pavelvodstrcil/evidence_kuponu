@@ -11,10 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
+
+Route::group(['middleware' => ['auth']], function () {
+
+    Route::get('/', function () {
+        return view('home');
+    });
 
 Route::get('/layout', function () {
     return view('layout');
@@ -37,6 +40,9 @@ Route::get('/prodej', function () {
 });
 
 Route::get ('/prodej/next', 'prodaneController@add');
+
+});
+
 
 Auth::routes();
 
