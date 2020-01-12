@@ -27,3 +27,17 @@ Route::get('/navsteva', function () {
     return view('navsteva');
 });
 Route::post ('/navsteva/add', 'navstevyController@add');
+Route::get('/produkty', function () {
+    return view('produkty');
+});
+
+
+Route::get('/prodej', function () {
+    return view('prodej');
+});
+
+Route::get ('/prodej/next', 'prodaneController@add');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

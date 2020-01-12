@@ -3,7 +3,7 @@
 @section('content')
 
 <?php
-$prodane=\App\prodane::all();
+$prodane=\App\prodane::orderBy('ID_prodane', 'DESC')->paginate(30);
 
     ?>
     <table class="table">
@@ -17,7 +17,7 @@ $prodane=\App\prodane::all();
             <th scope="col">Datum prodeje</th>
             <th scope="col">Poznámka</th>
             <th scope="col">Přidat návštěvu</th>
-            <th scope="col">zobrazit návštěvy</th>
+            <th scope="col">návštěvy a info o prodeji</th>
 
 
         </tr>
@@ -44,6 +44,8 @@ $prodane=\App\prodane::all();
     @endforeach
         </tbody>
     </table>
+
+    <p align="center">{{$prodane->links()}}</p>
 
 
 @endsection

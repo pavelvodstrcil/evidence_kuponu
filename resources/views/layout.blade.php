@@ -33,6 +33,8 @@
             <li class="nav-item">
                 <a class="nav-link" href="prodane">Prodané</a>
             <li class="nav-item">
+                <a class="nav-link" href="produkty">Prudukty a prodej</a>
+            <li class="nav-item">
                 <a class="nav-link" href="navsteva">Zadat návštěvu</a>
             </li>
             <li class="nav-item">
